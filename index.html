@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="container header">
-        <h1>Lucky-Birthday-Calculator</h1>
+        <h1>Lucky-Birthday Calculator</h1>
     </header>
     
     <main class="container main-container">
@@ -17,8 +17,9 @@
         <label for="date">Date of Birth:</label>
         <input type="date" id="date">
         <label for="lucky-number">Lucky Number:</label>
-        <input type="number" min=0 step=1 oninput="validity.valid||(value='')" id="lucky-number">
+        <input type="number" min=1 step=1 oninput="validity.valid||(value='')" id="lucky-number" disabled>
         <button id="check-btn">Check if Lucky</button>
+        <h2 id="message"></h2>
 
 
     </main>

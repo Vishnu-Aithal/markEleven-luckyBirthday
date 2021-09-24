@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
 :root{
     --primary-color: #222831;
     --secondary-color: #00ADB5;
@@ -7,6 +9,56 @@
 
 }
 
+body{
+    margin:0;
+    text-align: center;
+
+    font-family: 'Roboto Mono', monospace;
+}
+
+label,input,button{
+    display: block;
+    margin: 1rem auto;
+    font-size: larger;
+    border-color: var(--secondary-color);
+    border-radius: 0.5rem;
+    border-width: 3px;
+}
+
+.container {
+    max-width: 90vw;
+    margin: auto;
+}
+
+.main-container {
+    margin-top: 4rem;
+    background-color: var(--off-white);
+    padding: 1rem 0;
+    border-radius: 1rem;
+}
+
+.header {
+    background-color: var(--primary-color);
+    margin-top: 0;
+    padding: 0.5rem;
+
+    border-radius: 0 0 1rem 1rem;
+}
+
+.header h1 {
+    font-weight: bolder;
+    margin: 0;
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+button{
+    background-color: var(--secondary-color);
+    color: black;
+    border-color: var(--primary-color);
+    padding: 0.5rem 1.5rem;
+    font-weight: bold;
+}
 /* ------------------------------------------------------------------------------------------------------------------- */
 /* footer and color scheme common for markTen to markFifteen
 
@@ -30,7 +82,7 @@
 } */
 
 footer {
-    margin: 5rem auto 0;
+    margin: 3rem auto 0;
     max-width: 90vw;
     padding: 1rem;
     padding-top: 0.5rem;

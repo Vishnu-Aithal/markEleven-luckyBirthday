@@ -8,6 +8,8 @@ dateInput.onchange = () => {
     luckyNumberInput.value = "";
     message.style.display = "none";
 }
+luckyNumberInput.onchange = () => message.style.display = "none";
+
 function calcDateSum(dateStr) {
     var datewithouthyphen = dateStr.replaceAll('-', "");
     var sum = 0;

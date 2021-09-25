@@ -11,8 +11,8 @@ dateInput.onchange = (event) => {
     luckyNumberInput.value = "";
     if ((event.target.value != "")) {
         luckyNumberInput.removeAttribute("disabled");
-        if ((luckyNumberInput.value!="")){
-         checkBtn.removeAttribute("disabled");
+        if ((luckyNumberInput.value != "")) {
+            checkBtn.removeAttribute("disabled");
         }
     } else {
         // luckyNumberInput.setAttribute("disabled", "");
@@ -23,7 +23,9 @@ dateInput.onchange = (event) => {
 luckyNumberInput.oninput = (event) => {
     message.style.display = "none";
     if ((event.target.validity.valid) & (event.target.value != "")) {
-        checkBtn.removeAttribute("disabled")
+        if (dateInput.value != "") {
+            checkBtn.removeAttribute("disabled")
+        }
     } else {
         event.target.value = "";
         checkBtn.setAttribute("disabled", "");

@@ -2,25 +2,31 @@ var dateInput = document.querySelector("#date");
 var luckyNumberInput = document.querySelector("#lucky-number");
 var checkBtn = document.querySelector("#check-btn");
 var message = document.querySelector("#message");
+// to catch clear button on android phones
+// clear on mobile date input sets "value" to "defaultValue"
+dateInput.defualtValue = "";
 
 dateInput.onchange = (event) => {
-    if (event.target.value != "") {
+    message.style.display = "none";
+    luckyNumberInput.value = "";
+    if ((event.target.value != "")) {
         luckyNumberInput.removeAttribute("disabled");
-        luckyNumberInput.value = "";
-        message.style.display = "none";
-    } else{
+        if ((luckyNumberInput.value!="")){
+         checkBtn.removeAttribute("disabled");
+        }
+    } else {
+        // luckyNumberInput.setAttribute("disabled", "");
         checkBtn.setAttribute("disabled", "");
     }
 }
 
 luckyNumberInput.oninput = (event) => {
+    message.style.display = "none";
     if ((event.target.validity.valid) & (event.target.value != "")) {
-        message.style.display = "none";
-        luckyNumberInput.style.backgroundColor = "white"
         checkBtn.removeAttribute("disabled")
     } else {
         event.target.value = "";
-        checkBtn.setAttribute("disabled", "")
+        checkBtn.setAttribute("disabled", "");
     }
 }
 

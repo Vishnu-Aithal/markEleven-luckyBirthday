@@ -3,12 +3,27 @@ var luckyNumberInput = document.querySelector("#lucky-number");
 var checkBtn = document.querySelector("#check-btn");
 var message = document.querySelector("#message");
 
-dateInput.onchange = () => {
-    luckyNumberInput.removeAttribute("disabled");
-    luckyNumberInput.value = "";
-    message.style.display = "none";
+dateInput.onchange = (event) => {
+    if (event.target.value != "") {
+        luckyNumberInput.removeAttribute("disabled");
+        luckyNumberInput.value = "";
+        message.style.display = "none";
+    } else{
+        checkBtn.setAttribute("disabled", "");
+    }
 }
-luckyNumberInput.onchange = () => message.style.display = "none";
+
+luckyNumberInput.oninput = (event) => {
+    if ((event.target.validity.valid) & (event.target.value != "")) {
+        message.style.display = "none";
+        luckyNumberInput.style.backgroundColor = "white"
+        checkBtn.removeAttribute("disabled")
+    } else {
+        event.target.value = "";
+        checkBtn.setAttribute("disabled", "")
+    }
+}
+
 
 function calcDateSum(dateStr) {
     var datewithouthyphen = dateStr.replaceAll('-', "");
@@ -39,8 +54,6 @@ function clickHandler() {
     } else {
         unluckyMessage();
     }
-
-
 
 }
 

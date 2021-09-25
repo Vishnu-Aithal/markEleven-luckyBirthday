@@ -9,6 +9,7 @@ dateInput.defualtValue = "";
 dateInput.onchange = (event) => {
     message.style.display = "none";
     luckyNumberInput.value = "";
+    checkBtn.setAttribute("disabled", "");
     if ((event.target.value != "")) {
         luckyNumberInput.removeAttribute("disabled");
         if ((luckyNumberInput.value != "")) {

@@ -74,26 +74,7 @@ button:disabled{
 
 }
 /* ------------------------------------------------------------------------------------------------------------------- */
-/* footer and color scheme common for markTen to markFifteen
 
-    <footer class="footer">
-        <h3 class="footer-heading">©|2021|Vishnu Aithal</h3>
-        <div class="container-footer-links">
-            <a target="_blank" href="https://github.com/Vishnu-Aithal" title="GitHub" class="links github"><img src="/footer/github.svg" alt="" class="svg icons"></a>
-            <a target="_blank" href="https://twitter.com/Vishnu_Aithal" title="Twitter" class="links twitter"><img src="/footer/twitter.svg" alt="" class="svg icons"></a>
-            <a target="_blank" href="" title="Linkedin" class="links linkedin"><img src="/footer/linkedin.svg" alt="" class="svg icons"></a>
-            <a target="_blank" href="https://vishnu-aithal.netlify.app" title="Portfolio" class="links twitter"><img src="/footer/portfolio.svg" alt="" class="svg icons"></a>
-        </div>
-    </footer>
-
-:root{
-    --primary-color: #222831;
-    --secondary-color: #00ADB5;
-    --text: #393E46;
-    --off-white: #F3F4F6;
-    --svg-secondary-filter: invert(51%) sepia(67%) saturate(2685%) hue-rotate(147deg) brightness(93%) contrast(101%);
-
-} */
 
 footer {
     margin: 3rem auto 0;

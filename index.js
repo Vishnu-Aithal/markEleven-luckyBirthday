@@ -21,13 +21,16 @@ dateInput.onchange = (event) => {
 
 luckyNumberInput.oninput = (event) => {
     message.style.display = "none";
-    if ((event.target.validity.valid) & (event.target.value != "")) {
-        if (dateInput.value != "") {
-            checkBtn.removeAttribute("disabled")
+    if ((event.target.validity.valid)) {
+        event.target.previousValidValue = event.target.value;
+        if ((dateInput.value != "") && (event.target.value != "")) {
+            checkBtn.removeAttribute("disabled");
+        } else {
+            checkBtn.setAttribute("disabled", "");
         }
     } else {
-        event.target.value = "";
-        checkBtn.setAttribute("disabled", "");
+        event.target.value = event.target.previousValidValue;
+        // checkBtn.setAttribute("disabled", "");
     }
 }
 

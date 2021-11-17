@@ -59,7 +59,18 @@ button{
     border-width: 1px;
     padding: 0.5rem 1.5rem;
     font-weight: bold;
+    transition: ease 0.2s;
 }
+
+
+
+button:enabled:hover{
+    border-color: var(--secondary-color);
+    transition: ease 0.2s;
+    cursor: pointer;
+    box-shadow: 1px 1px var(--text);
+}
+
 button:disabled{
     background-color: white;
 }
